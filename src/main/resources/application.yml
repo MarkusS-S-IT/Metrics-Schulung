@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  ssl:
+    key-store-password:
+    key-alias:
+    enabled: false
+
+management:
+  server:
+    port: 28080

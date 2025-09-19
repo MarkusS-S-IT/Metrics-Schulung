@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 3s
+
+scrape_configs:
+  # service metrics
+  - job_name: 'spring-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets:
+        - 'host.docker.internal:28080'
