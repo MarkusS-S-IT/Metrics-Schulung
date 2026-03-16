@@ -1,4 +1,4 @@
-package dec.sitconsulting.metrics.service;
+package dev.sitconsulting.metrics.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

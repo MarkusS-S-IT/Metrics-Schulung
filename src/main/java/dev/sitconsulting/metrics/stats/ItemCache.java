@@ -1,4 +1,4 @@
-package dec.sitconsulting.metrics.stats;
+package dev.sitconsulting.metrics.stats;
 
 public class ItemCache {
     private long checks;

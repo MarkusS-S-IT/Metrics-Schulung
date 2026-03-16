@@ -1,6 +1,6 @@
-package dec.sitconsulting.metrics.controller;
+package dev.sitconsulting.metrics.controller;
 
-import dec.sitconsulting.metrics.service.ItemService;
+import dev.sitconsulting.metrics.service.ItemService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

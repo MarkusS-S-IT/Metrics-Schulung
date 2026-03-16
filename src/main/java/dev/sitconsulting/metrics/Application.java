@@ -1,4 +1,4 @@
-package dec.sitconsulting.metrics;
+package dev.sitconsulting.metrics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

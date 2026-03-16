@@ -1,6 +1,6 @@
-package dec.sitconsulting.metrics.controller;
+package dev.sitconsulting.metrics.controller;
 
-import dec.sitconsulting.metrics.service.LoginService;
+import dev.sitconsulting.metrics.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

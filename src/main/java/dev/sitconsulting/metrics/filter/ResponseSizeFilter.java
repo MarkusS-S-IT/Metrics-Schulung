@@ -1,6 +1,6 @@
-package dec.sitconsulting.metrics.filter;
+package dev.sitconsulting.metrics.filter;
 
-import dec.sitconsulting.metrics.wrapper.CountingHttpServletResponseWrapper;
+import dev.sitconsulting.metrics.wrapper.CountingHttpServletResponseWrapper;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;

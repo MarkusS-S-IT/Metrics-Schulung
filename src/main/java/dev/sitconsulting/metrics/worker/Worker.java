@@ -1,6 +1,9 @@
-package dec.sitconsulting.metrics.worker;
+package dev.sitconsulting.metrics.worker;
+
+import lombok.Getter;
 
 public class Worker {
+    @Getter
     private final String workerId;
     private final long startTimerMillis;
 
