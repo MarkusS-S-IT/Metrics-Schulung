@@ -7,6 +7,18 @@ server:
     key-alias:
     enabled: false
 
+spring:
+  application:
+    name: metrics-excercise
+  docker:
+    compose:
+      enabled: true
+      file: Monitoring/docker-compose.yml
+
+
 management:
   server:
     port: 28080
+
+logging:
+  root: DEBUG

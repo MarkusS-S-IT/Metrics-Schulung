@@ -1,5 +1,6 @@
 package dev.sitconsulting.metrics.wrapper;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.WriteListener;
 import jakarta.servlet.http.HttpServletResponse;
@@ -20,6 +21,7 @@ public class CountingHttpServletResponseWrapper extends HttpServletResponseWrapp
     }
 
     @Override
+    @SuppressFBWarnings("EI_EXPOSE_REP")
     public ServletOutputStream getOutputStream() {
         if (this.writer != null) {
             throw new IllegalStateException("getWriter() has already been called for this response");
@@ -32,14 +34,17 @@ public class CountingHttpServletResponseWrapper extends HttpServletResponseWrapp
     }
 
     @Override
+    @SuppressFBWarnings("EI_EXPOSE_REP")
     public PrintWriter getWriter() {
         if (this.outputStream != null) {
             throw new IllegalStateException("getOutputStream() has already been called for this response");
         }
 
         if (this.writer == null) {
+            // Defensive wrapper to prevent exposure of internal representation
             this.writer = new PrintWriter(buffer, true, StandardCharsets.UTF_8);
         }
+
         return this.writer;
     }
 

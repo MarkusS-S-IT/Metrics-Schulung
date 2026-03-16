@@ -5,7 +5,7 @@ services:
     image: victoriametrics/victoria-metrics:v1.114.0
     container_name: victoriametrics
     volumes:
-      - victoriametrics/victoriametrics.yml:/victoria-metrics-data/victoriametrics.yml
+      - ./victoriametrics/victoriametrics.yml:/victoria-metrics-data/victoriametrics.yml
       - victoriametrics_data:/victoria-metrics-data
     ports:
       - "9092:8428"
@@ -22,6 +22,8 @@ services:
           cpus: "1"
           memory: "4GB"
     restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   grafana:
     image: grafana/grafana:12.0.2
@@ -30,7 +32,7 @@ services:
       - "9091:3000"
     volumes:
       - grafana_data:/var/lib/grafana
-      - grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/provisioning:/etc/grafana/provisioning
     environment:
       - "GF_AUTH_ANONYMOUS_ENABLED=true"
       - "GF_AUTH_ANONYMOUS_ORG_NAME=Main Org."
@@ -50,5 +52,5 @@ services:
     restart: unless-stopped
 
 volumes:
-  - victoriametrics_data:
-  - grafana_data:
+  victoriametrics_data:
+  grafana_data:
