@@ -15,7 +15,6 @@ spring:
       enabled: true
       file: Monitoring/docker-compose.yml
 
-
 management:
   server:
     port: 28080
